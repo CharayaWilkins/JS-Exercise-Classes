@@ -49,6 +49,7 @@ class Person {
   }
   eat(someFood) {
     this.stomach.push(someFood);
+    this.stomach.length < 11;
   }
   poop() {
     this.stomach = [];
@@ -79,6 +80,10 @@ const kenny = new Person({
 */
 
 class Car {
+  constructor(attributes) {
+    this.model = attributes.model,
+    this.milesPerGallon = attributes.milesPerGallon
+  }
   
 }
 
@@ -157,7 +162,7 @@ class Student extends Lambdasian {
   }
   listSubjects(){
     this.favSubjects.push('Loving HTML, CSS, JS!');
-    // return this.favSubjects;
+    return this.favSubjects;
   }
   PRAssignment(subject) {
     return `${student.name} has submitted a PR for ${subject}`;
@@ -190,7 +195,7 @@ class ProjectManager extends Instructor{
      return `${this.name} announces to ${channel}, @channel standy times!`; 
    }
    debugsCode(student, subject) {
-     return `${this.name} debugs ${student.name}'s code on ${subject}`
+     return `${this.name} debugs ${student.name}'s code on ${subject}`;
    }
 }
 /*

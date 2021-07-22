@@ -63,6 +63,7 @@ const kenny = new Person({
   age: 23
 });
 
+
 /*
   TASK 2
     - Write a Car class whose constructor initializes `model` and `milesPerGallon` from arguments.
@@ -155,7 +156,14 @@ class Student extends Lambdasian {
     this.favSubjects = []
   }
   listSubjects(){
-    this.favSubjects.push('Loving HTML, CSS, JS');
+    this.favSubjects.push('Loving HTML, CSS, JS!');
+    // return this.favSubjects;
+  }
+  PRAssignment(subject) {
+    return `${student.name} has submitted a PR for ${subject}`;
+  }
+  sprintChallenge(subject) {
+    return `${student.name} has begun sprint challenge on ${subject}`;
   }
 }
 
@@ -172,8 +180,18 @@ class Student extends Lambdasian {
         + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
-class ProjectManager {
-   
+class ProjectManager extends Instructor{
+  constructor(info) {
+    super(info);
+    this.gradClassName = info.gradClassName,
+    this.favInstructor = info.favInstructor
+  }
+   standup(channel) {
+     return `${this.name} announces to ${channel}, @channel standy times!`; 
+   }
+   debugsCode(student, subject) {
+     return `${this.name} debugs ${student.name}'s code on ${subject}`
+   }
 }
 /*
   STRETCH PROBLEM (no tests!)

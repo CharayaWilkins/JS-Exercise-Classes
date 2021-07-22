@@ -42,10 +42,10 @@ class Airplane {
 */
 
 class Person {
-  constructor(info) {
-    this.name = info.name,
-    this.age = info.age,
-    this.stomach = []
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.stomach = [];
   }
   eat(someFood) {
     if(this.stomach.length < 10){
@@ -81,9 +81,9 @@ const kenny = new Person({
 */
 
 class Car {
-  constructor(attributes) {
-    this.model = attributes.model,
-    this.milesPerGallon = attributes.milesPerGallon
+  constructor(model, milesPerGallon) {
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
   }
   
 }
